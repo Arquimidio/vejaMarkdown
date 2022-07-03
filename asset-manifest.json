@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vejaMarkdown/static/css/main.06b01fc5.css",
+    "main.js": "/vejaMarkdown/static/js/main.6da351e7.js",
+    "index.html": "/vejaMarkdown/index.html",
+    "main.06b01fc5.css.map": "/vejaMarkdown/static/css/main.06b01fc5.css.map",
+    "main.6da351e7.js.map": "/vejaMarkdown/static/js/main.6da351e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06b01fc5.css",
+    "static/js/main.6da351e7.js"
+  ]
+}
