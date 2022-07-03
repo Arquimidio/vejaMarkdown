@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --dark: #404756;
+    --main-color: #5891CF;
+    --main-light: #9EB9EF;
+    --light-blue: #E1F1FF;
+    --grey: rgb(195, 215, 232);
+    --main-contrast: #D9A21B;
+    --block-quote: rgb(107, 128, 144);
+    --light-black: rgb(65, 65, 65);
+    --logo-font: 'Inter';
+    --code-bg: rgb(184, 221, 231);
+}
+
+body{
+    background-color: var(--main-color);
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/stripes-light.png');
+    font-family: 'Inter', sans-serif;
+}
+
+body, #root{
+    height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+i{
+    padding-right: 1rem;
+}
+
+blockquote{
+    margin: 0 1.5rem;
+    padding: 0 0.5rem;
+    position: relative;
+}
+
+blockquote::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: var(--block-quote);
+    width: 3px;
+    left: 0;
+    top: 0;
+}
+
+p > code{
+    display: inline-block;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.page-title{
+    color: white;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    font-family: var(--logo-font), cursive;
+    font-size: 2.5rem;
+}
+
+.page-title a{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+
+.title{
+    border: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+    padding: 1rem;
+    border-bottom: none;
+    background-color: var(--main-color);
+    color: white;
+}
+
+#preview, #editor{
+    border-radius: 0 0 5px 5px;
+}
+
+textarea, .previewer-container{
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.209);
+}
+
+.editor-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 50vw;
+}
+
+#editor{
+    border: 1px solid black;
+    padding: 1rem 1rem 0 1rem;
+    max-width: 100%;
+    background-color: white;
+    height: 100%;
+    width: 40vw;
+    min-width: 20vw;
+    font-size: 0.9rem;
+}
+
+#editor:focus{
+    outline: 0.5px solid var(--light-black);
+    border-radius: none;
+}
+
+#toolbar{
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-bottom: none;
+    background-color: white;
+    color: var(--main-color);
+    padding: 0.5rem 1rem;
+}
+
+#toolbar i + i{
+    margin-left: 0.1rem;
+}
+
+#toolbar i:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.previewer-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+code{
+    border-radius: 5px;
+    background-color: var(--code-bg) !important;
+    display: block;
+    padding: 0.5rem;
+}
+
+pre{
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+#preview, code, pre{
+    margin: 0;
+}
+
+#preview{
+    border: 1px solid black;
+    overflow: hidden;
+    padding: 1rem 1rem 2rem 1rem;
+    background-color: rgb(242, 250, 255);
+    height: 100%;
+    color: var(--light-black);
+}
+
+#preview > * + *{
+    margin-top: 1rem;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, td{
+    padding: 0.5rem;
+}
+
+footer{
+    background-color: var(--main-color);
+    margin-top: auto;
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+.me{
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dashed white;
+}
+
+@media screen and (max-width: 800px){
+    .container{
+        flex-direction: column;
+    }
+
+    #editor, .editor-container{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #editor{
+        min-height: 200px;
+    }
+}
+
